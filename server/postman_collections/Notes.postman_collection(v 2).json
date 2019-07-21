@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "2d60b98f-fc87-44c9-a509-9b8f1df43a2b",
+		"name": "Notes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register a user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "test_user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login a user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "test_user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a note",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDMxZWZlZTI1Mjg5YTA0YzgzYWFhYzQiLCJ1c2VybmFtZSI6InRlc3RfdXNlciIsImV4cCI6MTU2MzY0MDIyOSwiaWF0IjoxNTYzNTUzODI5fQ.Z-OZjKo5IbrVWSIhbVoejuxboT2lSExZTY8UTfsAhOI",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "some task tittle",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "test body",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/api/notes/create"
+			},
+			"response": []
+		},
+		{
+			"name": "fetch all notes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDMxZWZlZTI1Mjg5YTA0YzgzYWFhYzQiLCJ1c2VybmFtZSI6InRlc3RfdXNlciIsImV4cCI6MTU2MzY0MDIyOSwiaWF0IjoxNTYzNTUzODI5fQ.Z-OZjKo5IbrVWSIhbVoejuxboT2lSExZTY8UTfsAhOI",
+						"type": "text"
+					}
+				],
+				"url": "localhost:3000/api/notes/get-notes"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a note",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDMxZWZlZTI1Mjg5YTA0YzgzYWFhYzQiLCJ1c2VybmFtZSI6InRlc3RfdXNlciIsImV4cCI6MTU2MzY0MDIyOSwiaWF0IjoxNTYzNTUzODI5fQ.Z-OZjKo5IbrVWSIhbVoejuxboT2lSExZTY8UTfsAhOI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_id",
+							"value": "5d31f05425289a04c83aaac5",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/api/notes/delete"
+			},
+			"response": []
+		},
+		{
+			"name": "Update a note",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDMxZWZlZTI1Mjg5YTA0YzgzYWFhYzQiLCJ1c2VybmFtZSI6InRlc3RfdXNlciIsImV4cCI6MTU2MzY0MDIyOSwiaWF0IjoxNTYzNTUzODI5fQ.Z-OZjKo5IbrVWSIhbVoejuxboT2lSExZTY8UTfsAhOI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_id",
+							"value": "5d31f06525289a04c83aaac6",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "updated note",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "updated body",
+							"type": "text"
+						}
+					]
+				},
+				"url": "localhost:3000/api/notes/update"
+			},
+			"response": []
+		}
+	]
+}
