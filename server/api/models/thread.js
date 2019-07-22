@@ -12,9 +12,9 @@ const threadSchema = new Schema({
     required: true,
     type: String
   },
-  isCompleted: {
-    type: Boolean,
-    default: false
+  tags: {
+    type: Array,
+    default: []
   },
   userId: {
     required: true,

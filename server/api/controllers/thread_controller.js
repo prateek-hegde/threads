@@ -7,14 +7,22 @@ module.exports.createThread = async (req, res) => {
 
   const title = req.body.title;
   const body = req.body.body;
+  const tagArray = req.body.tags;
 
   const date = new Date().toLocaleString("en-US", {
     timeZone: "Asia/Calcutta"
   });
 
+  const tags = [];
+
+  tagArray.forEach(i => {
+    tags.push(i["name"]);
+  });
+
   const threadObj = {
     title: title,
     body: body,
+    tags: tags,
     userId: ObjectID(userId),
     date: date
   };
